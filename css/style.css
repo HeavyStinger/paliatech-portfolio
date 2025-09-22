@@ -166,8 +166,8 @@ main {
 /* Services */
 
 .services {
-    width: 100%;
-    margin-top: var(--page-y-spacing);
+    width: 100vw;
+    margin-top: var(--section-y-spacing);
     padding: 0 var(--page-x-deadzone);
 }
 
@@ -272,4 +272,97 @@ main {
     .services > .card-wrapper {
         grid-template-columns: 1fr 1fr 1fr;
     }
+}
+
+/* Call to action bottom */
+.cta-wrapper {
+    width: 100vw;
+    margin-top: var(--section-y-spacing);
+    padding: 0 var(--page-x-deadzone);
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.cta-wrapper::before {
+    content: "";
+    height: 50%;
+    width: 100%;
+    background-color: var(--primary-color);
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: 1;
+}
+
+.cta-bottom {
+    max-width: 560px;
+    background: linear-gradient(to top,rgb(0, 94, 153) 0%, rgba(0, 31, 63, 1) 60%);
+    padding: 48px 32px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+    border-radius: 10px;
+    box-shadow: 2px 5px 15px rgba(0, 0, 0, 0.5);
+    z-index: 2;
+}
+
+.cta-bottom > img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: left;
+    opacity: .08;
+    position: absolute;
+    z-index: 0;
+}
+
+.cta-bottom > .title {
+    margin-top: 5px;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 1.9rem;
+    line-height: 110%;
+    color: white;
+}
+
+.cta-bottom > .title.mini {
+    margin: 0;
+    color: var(--low-text-color);
+    font-size: 1rem;
+    letter-spacing: 2px;
+}
+
+.cta-bottom > .cta-buttons {
+    width: 100%;
+    margin-top: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.cta-bottom > .title,
+.cta-bottom > .cta-buttons {
+    position: relative; /* ensures they respect z-index */
+    z-index: 1; /* above the img */
+}
+
+.cta-bottom > .cta-buttons > .cta-button {
+    width: 100%;
+    text-align: center;
+}
+
+/* Style footer */
+footer {
+    width: 100vw;
+    padding: var(--page-y-spacing) var(--page-x-deadzone);
+    background-color: var(--primary-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: var(--page-y-spacing) var(--page-x-deadzone);
 }

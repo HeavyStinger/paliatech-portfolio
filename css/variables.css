@@ -1,6 +1,7 @@
 :root {
     --mobile-nav-height: 67.6px;
     --page-y-spacing: 25px;
+    --section-y-spacing: 100px;
     --page-x-deadzone: 20px;
     --primary-color: rgb(0, 31, 63);
     --secondary-color: rgb(67, 183, 255);
