@@ -84,7 +84,7 @@
     text-decoration: none;
     color: #fafbfc;
     text-transform: uppercase;
-    /* letter-spacing: 1px; */
+    text-align: center;
     font-weight: 600;
     border-radius: 20px;
     transition: background-color 0.3s, color 0.3s, border-color 0.3s;
@@ -96,6 +96,11 @@
     padding-left: 30px;
     padding-right: 30px;
     color: black;
+}
+
+.cta-button.super {
+    background-color: var(--primary-color);
+    color: white;
 }
 
 .cta-button.secondary {
@@ -274,6 +279,107 @@ main {
     }
 }
 
+/* Contact section */
+section.contact {
+    width: 100vw;
+    margin-top: var(--section-y-spacing);
+    padding: 0 var(--page-x-deadzone);
+}
+
+section.contact > .ceo {
+    width: 100%;
+    position: relative;
+}
+
+section.contact > .ceo > img {
+    /* height: 400px; */
+    width: 100%;
+    margin-top: var(--page-y-spacing);
+    object-fit: cover;
+    object-position: center;
+    border-radius: 5px;
+}
+
+section.contact > .ceo > .info {
+    background-color: var(--primary-color);
+    padding: 10px;
+    position: absolute;
+    right: 0;
+    bottom: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 25px;
+    font-size: 0.85rem;
+    color: var(--low-text-color);
+    border-radius: 5px 0 0 5px;
+}
+
+section.contact > .ceo > .info > .details > .position {
+    font-size: 0.75rem;
+}
+
+section.contact > .ceo > .info > img {
+    height: 40px;
+}
+
+section.contact > .title-wrapper {
+    width: 100%;
+    margin-top: var(--page-y-spacing);
+}
+
+section.contact > .content > .title-wrapper > .title {
+    font-size: 2rem;
+    font-weight: bolder;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+section.contact > .content > .title-wrapper > .title.sub {
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+    color: var(--secondary-text-color);
+}
+
+section.contact > .content > .title-wrapper > .description {
+    margin-top: 12px;
+    line-height: 1.4;
+    font-family: var(--secondary-font);
+    text-align: center;
+    color: var(--secondary-text-color);
+}
+
+section.contact > .content > .facts {
+    width: 100%;
+    margin-top: var(--page-y-spacing);
+    display: flex;
+    flex-direction: column;
+    gap: var(--page-y-spacing);
+}
+
+section.contact > .content > .facts > .fact {
+    width: 100%;
+}
+
+section.contact > .content > .facts > .fact > .title {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    gap: 5px;
+}
+
+section.contact > .content > .facts > .fact > .title > svg {
+    fill: var(--secondary-color);
+}
+
+section.contact > .content > .facts > .fact > .description {
+    width: 100%;
+    text-align: center;
+    font-family: var(--secondary-font);
+}
+
 /* Call to action bottom */
 .cta-wrapper {
     width: 100vw;
@@ -359,10 +465,162 @@ main {
 /* Style footer */
 footer {
     width: 100vw;
-    padding: var(--page-y-spacing) var(--page-x-deadzone);
+    background-color: var(--primary-color);
+    padding: var(--section-y-spacing) var(--page-x-deadzone);
+}
+
+footer > .content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: var(--page-y-spacing);
+}
+
+footer > .content > .top {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: var(--page-y-spacing);
+}
+
+footer > .content > .top > .logo {
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    gap: 10px;
+    font-size: 1.1rem;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+footer > .content > .top > .logo > img {
+    height: 60px;
+}
+
+footer > .content > .top > .description {
+    color: white;
+}
+
+footer > .content > .top > .cta-button {
+    width: fit-content;
+}
+
+footer > .content > .bottom .title {
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    color: white;
+    letter-spacing: 1px;
+}
+
+footer > .content > .bottom > .elements {
+
+}
+
+footer > .content > .bottom .elements {
+    margin-top: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+footer > .content > .bottom .elements > a {
+    text-decoration: none;
+    color: var(--low-text-color);
+    transition: color 0.2s ease-in-out;
+}
+
+footer > .content > .bottom .elements > a:hover {
+    color: white;
+}
+
+footer > .content > .bottom > .contact > .elements.contact > a:hover, footer > .content > .bottom > .contact > .elements.contact > a:hover > svg {
+    color: white;
+    fill: white;
+}
+
+footer > .content > .bottom > .contact {
+    margin-top: var(--page-y-spacing);
+}
+
+footer > .content > .bottom .elements.contact > .element {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--low-text-color);
+}
+
+footer > .content > .bottom .elements.contact > .element > svg {
+    width: 12px;
+    fill: var(--low-text-color);
+}
+
+@media only screen and (min-width: 768px) {
+
+    footer > .content > .bottom {
+        margin-top: 30px;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 50px;
+    }
+
+    footer > .content > .bottom .elements {
+        gap: 20px;
+    }
+
+    footer > .content > .bottom > .contact {
+        margin-top: 0;
+    }
+}
+
+@media only screen and (min-width: 948px) {
+    footer > .content {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    footer > .content > .top {
+        max-width: 50%;
+        gap: 20px;
+    }
+
+    footer > .content > .bottom {
+        gap: 15vw;
+    }
+}
+
+/* Socials */
+
+.socials {
+    width: 100%;
+    /* margin-top: var(--page-y-spacing); */
     background-color: var(--primary-color);
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: var(--page-y-spacing) var(--page-x-deadzone);
+    gap: 20px;
+    border-top: 1px solid var(--low-text-color);
+    padding: 10px 0;
+}
+
+.socials > .title {
+    color: white;
+}
+
+.socials > .icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.socials > .icons > a {
+    display: block;
+    text-decoration: none;
+}
+
+.socials svg {
+    width: 20px;
+    fill: white
 }
