@@ -328,6 +328,10 @@ section.contact > .title-wrapper {
     margin-top: var(--page-y-spacing);
 }
 
+section.contact > .content {
+    margin-top: var(--page-y-spacing);
+}
+
 section.contact > .content > .title-wrapper > .title {
     font-size: 2rem;
     font-weight: bolder;
