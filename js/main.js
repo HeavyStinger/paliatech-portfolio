@@ -1,3 +1,8 @@
+window.addEventListener("load", () => {
+    const loadingScreen = document.getElementById("loading-screen");
+    loadingScreen.style.display = "none";
+});
+
 let menuBtn = document.getElementById('menu-btn');
 let linkBox = document.querySelector('nav > .links');
 menuBtn.addEventListener('change', () => {
