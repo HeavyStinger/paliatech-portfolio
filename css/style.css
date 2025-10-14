@@ -480,7 +480,7 @@ section.pricing > .top {
 
 section.pricing > .offers {
     width: 100%;
-    margin-top: var(--section-y-spacing);
+    margin-top: var(--page-y-spacing);
     display: grid;
     grid-template-columns: 1fr;
     gap: var(--page-x-deadzone) var(--page-y-spacing);
