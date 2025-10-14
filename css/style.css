@@ -172,7 +172,7 @@ main {
 
 .services {
     width: 100vw;
-    margin-top: var(--section-y-spacing);
+    margin-top: var(--page-y-spacing);
     padding: 0 var(--page-x-deadzone);
 }
 
@@ -584,6 +584,105 @@ section.pricing > .offers > .card > a {
     }
 }
 
+/* Group-style portfolio */
+section.portfolio {
+    margin-top: var(--section-y-spacing);
+    padding: 0 var(--page-x-deadzone);
+}
+
+section.portfolio > .top {
+    display: flex;
+    flex-direction: column;
+}
+
+section.portfolio > .top > .description {
+    font-family: var(--secondary-font);
+    text-align: center;
+    color: var(--secondary-text-color);
+}
+
+section.portfolio > .projects {
+    width: 100%;
+    margin-top: var(--page-y-spacing);
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--page-x-deadzone) var(--page-y-spacing);
+}
+
+section.portfolio > .projects > .project {
+    background-color: rgb(247, 247, 247);
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    border-radius: 5px;
+}
+
+section.portfolio > .projects > .project.primary {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+section.portfolio > .projects > .project.primary > .description {
+    color: var(--low-text-color);
+}
+
+section.portfolio > .projects > .project.primary > a {
+    background-color: var(--secondary-color);
+    color: black;
+}
+
+/* section.portfolio > .projects > .project:nth-child(even)  */
+
+section.portfolio > .projects > .project > img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+section.portfolio > .projects > .project > .title-reusable {
+    font-size: 1.5rem;
+}
+
+section.portfolio > .projects > .project > .description {
+    width: 100%;
+    font-family: var(--secondary-font);
+    text-align: center;
+    color: var(--secondary-text-color);
+}
+
+/* Portfolio breakpoints */
+@media only screen and (min-width: 768px) {
+    section.portfolio > .top {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    section.portfolio > .top > .title-wrapper {
+        width: 40%;
+    }
+
+    section.portfolio > .top > .title-wrapper > .title-reusable {
+        text-align: left;
+    }
+
+    section.portfolio > .top > .description {
+        width: 50%;
+        padding-left: 10%;
+        text-align: left;
+        border-left: 5px solid var(--primary-color);
+    }
+
+    section.portfolio > .projects {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    section.portfolio > .projects {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
 /* Call to action bottom */
 .cta-wrapper {
     width: 100vw;
@@ -670,7 +769,7 @@ section.pricing > .offers > .card > a {
 footer {
     width: 100vw;
     background-color: var(--primary-color);
-    padding: var(--section-y-spacing) var(--page-x-deadzone);
+    padding: 100px var(--page-x-deadzone);
 }
 
 footer > .content {
@@ -717,10 +816,6 @@ footer > .content > .bottom .title {
     letter-spacing: 1px;
 }
 
-footer > .content > .bottom > .elements {
-
-}
-
 footer > .content > .bottom .elements {
     margin-top: 12px;
     display: flex;
@@ -729,18 +824,19 @@ footer > .content > .bottom .elements {
 }
 
 footer > .content > .bottom .elements > a {
+    display: block;
     text-decoration: none;
     color: var(--low-text-color);
     transition: color 0.2s ease-in-out;
 }
 
 footer > .content > .bottom .elements > a:hover {
-    color: white;
+    color: var(--secondary-color);
 }
 
 footer > .content > .bottom > .contact > .elements.contact > a:hover, footer > .content > .bottom > .contact > .elements.contact > a:hover > svg {
-    color: white;
-    fill: white;
+    color: var(--secondary-color);
+    fill: var(--secondary-color);
 }
 
 footer > .content > .bottom > .contact {
@@ -755,7 +851,8 @@ footer > .content > .bottom .elements.contact > .element {
 }
 
 footer > .content > .bottom .elements.contact > .element > svg {
-    width: 12px;
+    width: 18px;
+    display: block;
     fill: var(--low-text-color);
 }
 
@@ -800,31 +897,29 @@ footer > .content > .bottom .elements.contact > .element > svg {
     width: 100%;
     /* margin-top: var(--page-y-spacing); */
     background-color: var(--primary-color);
+    padding: 10px 0;
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 20px;
     border-top: 1px solid var(--low-text-color);
-    padding: 10px 0;
 }
 
 .socials > .title {
     color: white;
 }
 
-.socials > .icons {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 15px;
-}
-
-.socials > .icons > a {
+.socials > a {
     display: block;
     text-decoration: none;
 }
 
+.socials > a:hover svg {
+    fill: var(--secondary-color);
+}
+
 .socials svg {
     width: 20px;
-    fill: white
+    display: block;
+    fill: white;
 }
