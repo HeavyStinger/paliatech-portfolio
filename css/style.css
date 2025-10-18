@@ -6,8 +6,8 @@
 @import url("../vendor/corbzhamburger/hamburger.css");
 
 .hero {
-    height: 100vh;
-    width: 100vw;
+    height: 100dvh;
+    width: 100dvw;
     /* background-color: brown; */
     background-image: url(../images/hero-bg.svg);
     background-position: center;
@@ -17,7 +17,7 @@
 }
 
 .hero > .hero-content {
-    width: calc(100vw - var(--page-x-deadzone) * 2);
+    width: calc(100dvw - var(--page-x-deadzone) * 2);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -165,13 +165,13 @@
 }
 
 main {
-    width: 100vw;
+    width: 100dvw;
 }
 
 /* Services */
 
 .services {
-    width: 100vw;
+    width: 100dvw;
     margin-top: var(--page-y-spacing);
     padding: 0 var(--page-x-deadzone);
 }
@@ -281,7 +281,7 @@ main {
 
 /* Contact section */
 section.contact {
-    width: 100vw;
+    width: 100dvw;
     margin-top: var(--section-y-spacing);
     padding: 0 var(--page-x-deadzone);
 }
@@ -685,7 +685,7 @@ section.portfolio > .projects > .project > .description {
 
 /* Call to action bottom */
 .cta-wrapper {
-    width: 100vw;
+    width: 100dvw;
     margin-top: var(--section-y-spacing);
     padding: 0 var(--page-x-deadzone);
     display: flex;
@@ -767,7 +767,7 @@ section.portfolio > .projects > .project > .description {
 
 /* Style footer */
 footer {
-    width: 100vw;
+    width: 100dvw;
     background-color: var(--primary-color);
     padding: 100px var(--page-x-deadzone);
 }
@@ -887,7 +887,7 @@ footer > .content > .bottom .elements.contact > .element > svg {
     }
 
     footer > .content > .bottom {
-        gap: 15vw;
+        gap: 15dvw;
     }
 }
 
