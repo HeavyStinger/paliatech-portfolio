@@ -425,7 +425,12 @@ section.contact > .container > .content > .facts .fact > .description {
     }
 
     section.contact > .container > .content > .facts > div {
+        max-width: 50%;
         gap: 30px;
+    }
+
+    section.contact > .container > .content > .facts > div > .fact > .description {
+        height: 135px;
     }
 
     section.contact > .container > .content > .facts .fact > .title {
@@ -489,6 +494,8 @@ section.pricing > .offers {
 section.pricing > .offers > .card {
     background-color: rgb(247, 247, 247);
     padding: 24px;
+    display: flex;
+    flex-direction: column;
     border-radius: 5px;
 }
 
@@ -511,6 +518,7 @@ section.pricing > .offers > .card:nth-child(even) > .details > .detail {
 
 section.pricing > .offers > .card > .details {
     margin-top: 10px;
+    margin-bottom: calc(var(--page-y-spacing) * 2);
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -537,14 +545,18 @@ section.pricing > .offers > .card > .details > .detail > svg.not-included {
     fill: red;
 }
 
-section.pricing > .offers > .card > .price {
-    margin-top: calc(var(--page-y-spacing) * 2);
+section.pricing > .offers > .card > .bottom {
+    margin-top: auto;
+}
+
+section.pricing > .offers > .card .price {
+    /* margin-top: calc(var(--page-y-spacing) * 2); */
     font-family: var(--primary-font);
     font-size: 3rem;
     font-weight: bold;
 }
 
-section.pricing > .offers > .card > .price > span {
+section.pricing > .offers > .card .price > span {
     text-transform: capitalize;
     font-family: var(--secondary-font);
     font-size: 1rem;
@@ -552,11 +564,11 @@ section.pricing > .offers > .card > .price > span {
     color: var(--secondary-text-color);
 }
 
-section.pricing > .offers > .card:nth-child(even) > .price > span {
+section.pricing > .offers > .card:nth-child(even) .price > span {
     color: var(--low-text-color);
 }
 
-section.pricing > .offers > .card > a {
+section.pricing > .offers > .card a {
     margin-top: var(--page-y-spacing);
 }
 
